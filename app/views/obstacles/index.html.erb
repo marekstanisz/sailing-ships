@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Obstacles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @obstacles.each do |obstacle| %>
+      <tr>
+        <td><%= obstacle.content %></td>
+        <td><%= link_to 'Show', obstacle %></td>
+        <td><%= link_to 'Edit', edit_obstacle_path(obstacle) %></td>
+        <td><%= link_to 'Destroy', obstacle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Obstacle', new_obstacle_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fuckups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fuckups.each do |fuckup| %>
+      <tr>
+        <td><%= fuckup.content %></td>
+        <td><%= link_to 'Show', fuckup %></td>
+        <td><%= link_to 'Edit', edit_fuckup_path(fuckup) %></td>
+        <td><%= link_to 'Destroy', fuckup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fuckup', new_fuckup_path %>

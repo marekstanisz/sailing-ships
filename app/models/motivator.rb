@@ -1,0 +1,2 @@
+class Motivator < ApplicationRecord
+end

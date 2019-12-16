@@ -1,0 +1,2 @@
+module FuckupsHelper
+end
